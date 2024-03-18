@@ -1,1 +1,1 @@
-## **Docker link:** [here](https://hub.docker.com/r/leovambarii/ebiznes_1)
+## **Docker hub link:** [here](https://hub.docker.com/r/leovambarii/ebiznes_1)
