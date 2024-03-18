@@ -3,4 +3,4 @@ version: "3.8"
 
 services:
   my_service:
-    image: Leovambarii/1:latest
+    image: leovambarii/1:latest
