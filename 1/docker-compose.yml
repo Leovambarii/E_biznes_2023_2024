@@ -1,0 +1,6 @@
+# 5.0 dodać konfigurację docker-compose
+version: "3.8"
+
+services:
+  my_service:
+    image: Leovambarii/1:latest
