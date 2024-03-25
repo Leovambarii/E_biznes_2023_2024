@@ -31,22 +31,30 @@ class ProductController @Inject()(val controllerComponents: ControllerComponents
     }
   }
 
-  def update(productId: Long): Action[JsValue] = Action(parse.json) { request =>
-    request.body.validate[NewProduct].fold(
-      errors => BadRequest(Json.obj("message" -> JsError.toJson(errors))),
-      product => {
+  def updateItem(productId: Long): Action[JsValue] = Action(parse.json) { request =>
+    request.body.validate[JsObject].fold(
+      errors => {
+        BadRequest(Json.obj("message" -> JsError.toJson(errors)))
+      },
+      productFields => {
         products.indexWhere(_.id == productId) match {
           case -1 => NotFound(Json.obj("message" -> "Product not found"))
           case index =>
-            val updateProduct = Product(productId, product.name, product.description, product.category, product.price)
-            products.update(index, updateProduct)
-            Ok(Json.obj("message" -> "Product updated successfully", "product" -> updateProduct))
+            val currProduct = products(index)
+            val updatedProduct = currProduct.copy(
+              name = (productFields \ "name").asOpt[String].getOrElse(currProduct.name),
+              description = (productFields \ "description").asOpt[String].getOrElse(currProduct.description),
+              category = (productFields \ "category").asOpt[Int].getOrElse(currProduct.category),
+              price = (productFields \ "price").asOpt[Int].getOrElse(currProduct.price)
+            )
+            products.update(index, updatedProduct)
+            Ok(Json.obj("message" -> "Product updated successfully", "product" -> updatedProduct))
         }
       }
     )
   }
 
-  def delete(productId: Long): Action[AnyContent] = Action {
+  def deleteItem(productId: Long): Action[AnyContent] = Action {
     products.indexWhere(_.id == productId) match {
       case -1 => NotFound(Json.obj("message" -> "Product not found"))
       case index =>
@@ -55,7 +63,7 @@ class ProductController @Inject()(val controllerComponents: ControllerComponents
     }
   }
 
-  def add(): Action[JsValue] = Action(parse.json) { request =>
+  def addItem(): Action[JsValue] = Action(parse.json) { request =>
     request.body.validate[NewProduct].fold(
       errors => BadRequest(Json.obj("message" -> JsError.toJson(errors))),
       product => {

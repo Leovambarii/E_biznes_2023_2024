@@ -12,6 +12,6 @@ GET     /assets/*file               controllers.Assets.versioned(path="/public",
 GET       /products                       controllers.ProductController.showAll()
 GET       /products/:productId            controllers.ProductController.showById(productId : Long)
 
-PUT       /products/:productId            controllers.ProductController.update(productId : Long)
-DELETE    /products/:productId            controllers.ProductController.delete(productId : Long)
-POST      /products                       controllers.ProductController.add()
+PUT       /products/:productId            controllers.ProductController.updateItem(productId : Long)
+DELETE    /products/:productId            controllers.ProductController.deleteItem(productId : Long)
+POST      /products                       controllers.ProductController.addItem()
