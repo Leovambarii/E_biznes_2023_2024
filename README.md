@@ -21,9 +21,9 @@
 
 ### **Kod**: [2](https://github.com/Leovambarii/E_biznes_2023_2024/tree/main/2/ScalaProject)
 
-:white_check_mark: 3.0 - Należy stworzyć kontroler do Produktów - [Commit](https://github.com/Leovambarii/E_biznes_2023_2024/commit/e6637337837af77903151f5f9c01a52fa5d87f04)
+:white_check_mark: 3.0 - Należy stworzyć kontroler do Produktów - [Commit](https://github.com/Leovambarii/E_biznes_2023_2024/commit/22eba476a524cb29661eab9ecbd0c5794ebc6ed9)
 
-:white_check_mark: 3.5 - Do kontrolera należy stworzyć endpointy zgodnie z CRUD - dane pobierane z listy - [Commit](https://github.com/Leovambarii/E_biznes_2023_2024/commit/e6637337837af77903151f5f9c01a52fa5d87f04)
+:white_check_mark: 3.5 - Do kontrolera należy stworzyć endpointy zgodnie z CRUD - dane pobierane z listy - [Commit](https://github.com/Leovambarii/E_biznes_2023_2024/commit/22eba476a524cb29661eab9ecbd0c5794ebc6ed9)
 
 :x: 4.0 - Należy stworzyć kontrolery do Kategorii oraz Koszyka + endpointy zgodnie z CRUD
 
