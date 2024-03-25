@@ -24,3 +24,9 @@
 :white_check_mark: 3.0 - Należy stworzyć kontroler do Produktów - [Commit](https://github.com/Leovambarii/E_biznes_2023_2024/commit/e6637337837af77903151f5f9c01a52fa5d87f04)
 
 :white_check_mark: 3.5 - Do kontrolera należy stworzyć endpointy zgodnie z CRUD - dane pobierane z listy - [Commit](https://github.com/Leovambarii/E_biznes_2023_2024/commit/e6637337837af77903151f5f9c01a52fa5d87f04)
+
+:x: 4.0 - Należy stworzyć kontrolery do Kategorii oraz Koszyka + endpointy zgodnie z CRUD
+
+:x: 4.5 - Należy aplikację uruchomić na dockerze (stworzyć obraz) oraz dodać skrypt uruchamiający aplikację via ngrok
+
+:x: - 5.0 Należy dodać konfigurację CORS dla dwóch hostów dla metod CRUD
