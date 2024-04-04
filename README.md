@@ -35,12 +35,12 @@
 
 ### **Kod**: [3](https://github.com/Leovambarii/E_biznes_2023_2024/tree/main/3)
 
-:white_check_mark: - 3.0 - Należy stworzyć aplikację kliencką w Kotlinie we frameworku Ktor, która pozwala na przesyłanie wiadomości na platformę Discord - [Commit]()
+:white_check_mark: - 3.0 - Należy stworzyć aplikację kliencką w Kotlinie we frameworku Ktor, która pozwala na przesyłanie wiadomości na platformę Discord - [Commit](https://github.com/Leovambarii/E_biznes_2023_2024/commit/23d68b1975fd40bf206c2cb18ad62a36e0b23cc2)
 
-:white_check_mark: 3.5 - Aplikacja jest w stanie odbierać wiadomości użytkowników z platformy Discord skierowane do aplikacji (bota) - [Commit]()
+:white_check_mark: 3.5 - Aplikacja jest w stanie odbierać wiadomości użytkowników z platformy Discord skierowane do aplikacji (bota) - [Commit](https://github.com/Leovambarii/E_biznes_2023_2024/commit/23d68b1975fd40bf206c2cb18ad62a36e0b23cc2)
 
-:white_check_mark: 4.0 - Zwróci listę kategorii na określone żądanie użytkownika - [Commit]()
+:white_check_mark: 4.0 - Zwróci listę kategorii na określone żądanie użytkownika - [Commit](https://github.com/Leovambarii/E_biznes_2023_2024/commit/23d68b1975fd40bf206c2cb18ad62a36e0b23cc2)
 
-:white_check_mark: 4.5 - Zwróci listę produktów wg żądanej kategorii - [Commit]()
+:white_check_mark: 4.5 - Zwróci listę produktów wg żądanej kategorii - [Commit](https://github.com/Leovambarii/E_biznes_2023_2024/commit/23d68b1975fd40bf206c2cb18ad62a36e0b23cc2)
 
-:x: - 5.0 Aplikacja obsłuży dodatkowo jedną z platform: Slack, Messenfer, Webex, Skype, Discrod - [Commit]()
+:x: - 5.0 Aplikacja obsłuży dodatkowo jedną z platform: Slack, Messenger, Webex, Skype - [Commit](https://github.com/Leovambarii/E_biznes_2023_2024/commit/23d68b1975fd40bf206c2cb18ad62a36e0b23cc2)
