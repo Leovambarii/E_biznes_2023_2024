@@ -43,4 +43,4 @@
 
 :white_check_mark: 4.5 - Zwróci listę produktów wg żądanej kategorii - [Commit](https://github.com/Leovambarii/E_biznes_2023_2024/commit/23d68b1975fd40bf206c2cb18ad62a36e0b23cc2)
 
-:x: - 5.0 Aplikacja obsłuży dodatkowo jedną z platform: Slack, Messenger, Webex, Skype - [Commit](https://github.com/Leovambarii/E_biznes_2023_2024/commit/23d68b1975fd40bf206c2cb18ad62a36e0b23cc2)
+:x: - 5.0 Aplikacja obsłuży dodatkowo jedną z platform: Slack, Messenger, Webex, Skype
