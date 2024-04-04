@@ -29,4 +29,18 @@
 
 :x: 4.5 - Należy aplikację uruchomić na dockerze (stworzyć obraz) oraz dodać skrypt uruchamiający aplikację via ngrok
 
-:x: - 5.0 Należy dodać konfigurację CORS dla dwóch hostów dla metod CRUD
+:x: 5.0 - Należy dodać konfigurację CORS dla dwóch hostów dla metod CRUD
+
+## **Zadanie 3** Kotlin
+
+### **Kod**: [3](https://github.com/Leovambarii/E_biznes_2023_2024/tree/main/3)
+
+:white_check_mark: - 3.0 - Należy stworzyć aplikację kliencką w Kotlinie we frameworku Ktor, która pozwala na przesyłanie wiadomości na platformę Discord - [Commit]()
+
+:white_check_mark: 3.5 - Aplikacja jest w stanie odbierać wiadomości użytkowników z platformy Discord skierowane do aplikacji (bota) - [Commit]()
+
+:white_check_mark: 4.0 - Zwróci listę kategorii na określone żądanie użytkownika - [Commit]()
+
+:white_check_mark: 4.5 - Zwróci listę produktów wg żądanej kategorii - [Commit]()
+
+:x: - 5.0 Aplikacja obsłuży dodatkowo jedną z platform: Slack, Messenfer, Webex, Skype, Discrod - [Commit]()
