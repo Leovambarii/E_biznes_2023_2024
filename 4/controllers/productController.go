@@ -17,7 +17,9 @@ func NewProductController(db *gorm.DB) *ProductController {
 
 func (pc *ProductController) GetProducts(c echo.Context) error {
 	var products []models.Product
-	pc.DB.Find(&products)
+	if err := pc.DB.Find(&products).Error; err != nil {
+		return c.JSON(http.StatusInternalServerError, map[string]string{"error": "internal server error"})
+	}
 
 	return c.JSON(http.StatusOK, products)
 }
@@ -34,7 +36,10 @@ func (pc *ProductController) AddProduct(c echo.Context) error {
 		return c.JSON(http.StatusBadRequest, map[string]string{"error": "missing required fields"})
 	}
 
-	pc.DB.Create(&product)
+	if err := pc.DB.Create(&product).Error; err != nil {
+		println("Error AddProduct Create: " + err.Error())
+		return c.JSON(http.StatusInternalServerError, map[string]string{"error": "internal server error"})
+	}
 
 	return c.JSON(http.StatusOK, product)
 }
@@ -83,7 +88,8 @@ func (pc *ProductController) EditProduct(c echo.Context) error {
 		println("Error editProduct Save: " + err.Error())
 		return c.JSON(http.StatusInternalServerError, map[string]string{"error": "internal server error"})
 	}
-	return c.JSON(200, product)
+
+	return c.JSON(http.StatusOK, product)
 }
 
 func (pc *ProductController) DeleteProduct(c echo.Context) error {
@@ -93,7 +99,11 @@ func (pc *ProductController) DeleteProduct(c echo.Context) error {
 	if err := pc.DB.First(&product, id).Error; err != nil {
 		return c.JSON(http.StatusNotFound, map[string]string{"error": "product not found"})
 	}
-	pc.DB.Delete(&product)
+
+	if err := pc.DB.Delete(&product).Error; err != nil {
+		println("Error DeleteProduct: " + err.Error())
+		return c.JSON(http.StatusInternalServerError, map[string]string{"error": "internal server error"})
+	}
 
 	return c.JSON(http.StatusOK, map[string]string{"message": "Product deleted"})
 }
