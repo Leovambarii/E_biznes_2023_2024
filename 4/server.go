@@ -26,13 +26,6 @@ func main() {
 		panic(err)
 	}
 
-	e.Use(func(next echo.HandlerFunc) echo.HandlerFunc {
-		return func(c echo.Context) error {
-			c.Set("product", DB)
-			return next(c)
-		}
-	})
-
 	productController := controllers.NewProductController(DB)
 	e.GET("/products", productController.GetProducts)
 	e.POST("/products", productController.AddProduct)
