@@ -49,12 +49,14 @@
 
 ### **Kod**: [4](https://github.com/Leovambarii/E_biznes_2023_2024/tree/main/4)
 
-:white_check_mark: - 3.0 - Należy stworzyć aplikację we frameworki echo w j. Go, która będzie miała kontroler Produktów zgodny z CRUD - [Commit](https://github.com/Leovambarii/E_biznes_2023_2024/commit/8538c40b15a8b2bf94f1448e20c1a5979dc8ad76)
+:white_check_mark: - 3.0 - Należy stworzyć aplikację we frameworki echo w j. Go, która będzie miała kontroler Produktów zgodny z CRUD - [Commit](https://github.com/Leovambarii/E_biznes_2023_2024/commit/d42cef195a7c44beb8dfe5cb1e99a18f9ffe7caf)
 
-:white_check_mark: 3.5 - Należy stworzyć model Produktów wykorzystując gorm oraz wykorzystać model do obsługi produktów (CRUD) w kontrolerze (zamiast listy) - [Commit](https://github.com/Leovambarii/E_biznes_2023_2024/commit/8538c40b15a8b2bf94f1448e20c1a5979dc8ad76)
+:white_check_mark: 3.5 - Należy stworzyć model Produktów wykorzystując gorm oraz wykorzystać model do obsługi produktów (CRUD) w kontrolerze (zamiast listy) - [Commit](https://github.com/Leovambarii/E_biznes_2023_2024/commit/d42cef195a7c44beb8dfe5cb1e99a18f9ffe7caf)
 
-:x: 4.0 - Należy dodać model Koszyka oraz dodać odpowiedni endpoint
+:x: 4.0 - Należy dodać model Koszyka oraz dodać odpowiedni endpoint - [Commit](https://github.com/Leovambarii/E_biznes_2023_2024/commit/d42cef195a7c44beb8dfe5cb1e99a18f9ffe7caf)
 
-:x: 4.5 - Należy stworzyć model kategorii i dodać relację między kategorią, a produktem
+
+:x: 4.5 - Należy stworzyć model kategorii i dodać relację między kategorią, a produktem - [Commit](https://github.com/Leovambarii/E_biznes_2023_2024/commit/d42cef195a7c44beb8dfe5cb1e99a18f9ffe7caf)
+
 
 :x: - 5.0 pogrupować zapytania w gorm’owe scope'y
