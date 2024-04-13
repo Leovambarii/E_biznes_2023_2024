@@ -12,3 +12,9 @@ demo_3_Kotlin:
 
 https://github.com/Leovambarii/E_biznes_2023_2024/assets/95575742/b4802b1a-97e6-4a62-9333-25c131665cc9
 
+demo_4_Go:
+
+https://github.com/Leovambarii/E_biznes_2023_2024/assets/95575742/95235dba-5ae7-4851-bfb5-8c04ffe9dbe9
+
+
+
