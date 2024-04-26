@@ -16,5 +16,7 @@ demo_4_Go:
 
 https://github.com/Leovambarii/E_biznes_2023_2024/assets/95575742/95235dba-5ae7-4851-bfb5-8c04ffe9dbe9
 
+demo_5_Frontend:
 
+https://github.com/Leovambarii/E_biznes_2023_2024/assets/95575742/326a456f-e499-4d12-a919-1775ecdfd7bc
 
