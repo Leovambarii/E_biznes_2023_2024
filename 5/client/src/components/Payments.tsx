@@ -24,25 +24,31 @@ const Payments: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    try {
-      console.log(typeof payment.amount);
-      const response = await fetch('http://localhost:8080/payment', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(payment),
-      });
-      if (response.ok) {
-        const data = await response.json();
-        clearCart();
-        setResponse(JSON.stringify(data));
-      } else {
-        throw new Error('Failed to make payment.');
-      }
-    } catch (error) {
-      console.error('Error making payment:', error);
-      setResponse('Error: Unable to make payment. Please try again.');
+
+    if (cartTotalAmount === 0) {
+      setResponse("There are no products in cart to pay for.");
+      return;
+    }
+
+    if (!payment.cardNumber || !payment.expiryDate) {
+      setResponse("Please fill in all the fields.");
+      return;
+    }
+
+    payment.amount = cartTotalAmount.toFixed(2);
+
+    const response = await fetch('http://localhost:8080/payment', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify(payment),
+    });
+    if (response.ok) {
+      clearCart();
+      setResponse(`Payment successful!`);
+    } else {
+      setResponse(`Failed to make payment! Make sure the card is valid.`);
     }
   };
 
@@ -50,22 +56,22 @@ const Payments: React.FC = () => {
     <div>
       <h2>Payment</h2>
       <form onSubmit={handleSubmit}>
-        <div>
+        <div className="input-container">
           <label htmlFor="cardNumber">Card Number:</label>
           <input
             type="text"
             id="cardNumber"
             name="cardNumber"
+            placeholder={"1234 1234 1234 1234"}
             value={payment.cardNumber}
             onChange={handleChange}
           />
-        </div>
-        <div>
           <label htmlFor="expiryDate">Expiry Date:</label>
           <input
             type="text"
             id="expiryDate"
             name="expiryDate"
+            placeholder={"MM/YY"}
             value={payment.expiryDate}
             onChange={handleChange}
           />
@@ -73,11 +79,12 @@ const Payments: React.FC = () => {
         <div>
           <p>Total Amount: {cartTotalAmount.toFixed(2)}</p>
         </div>
-        <button type="submit">Make Payment</button>
+        <div className="payment-bttn-div">
+          <button type="submit">Make Payment</button>
+        </div>
       </form>
-      {response && <div>Response: {response}</div>}
-
-      <CartComponent />
+      {response && <p style={{color: response.includes('successful') ? 'green' : 'red'}}>{response}</p>}
+      <CartComponent/>
     </div>
   );
 };

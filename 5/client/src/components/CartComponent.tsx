@@ -9,7 +9,7 @@ const CartComponent: React.FC = () => {
     <div>
       <h2>Shopping Cart</h2>
       {cart.length === 0 ? (
-        <p>No products in the cart</p>
+        <p>No products in the cart.</p>
       ) : (
         <div>
           <table>
@@ -19,8 +19,7 @@ const CartComponent: React.FC = () => {
               <th>Description</th>
               <th>Price</th>
               <th>Quantity</th>
-              <th>Add more</th>
-              <th>Remove one</th>
+              <th></th>
             </tr>
             </thead>
             <tbody>
@@ -29,12 +28,12 @@ const CartComponent: React.FC = () => {
                 <td>{product.name}</td>
                 <td>{product.description}</td>
                 <td>{product.price}</td>
-                <td>{product.quantity}</td>
-                <td>
-                  <button onClick={() => addProductToCart(product)}>+</button>
+                <td style={{textAlign: 'center'}}>{product.quantity}</td>
+                <td style={{textAlign: 'center'}}>
+                  <button onClick={() => addProductToCart(product)}>Add</button>
                 </td>
-                <td>
-                  <button onClick={() => removeProductFromCart(product.id)}>-</button>
+                <td style={{textAlign: 'center'}}>
+                  <button onClick={() => removeProductFromCart(product.id)}>Remove</button>
                 </td>
 
               </tr>

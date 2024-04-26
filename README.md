@@ -43,7 +43,7 @@
 
 :white_check_mark: 4.5 - Zwróci listę produktów wg żądanej kategorii - [Commit](https://github.com/Leovambarii/E_biznes_2023_2024/commit/23d68b1975fd40bf206c2cb18ad62a36e0b23cc2)
 
-:x: - 5.0 Aplikacja obsłuży dodatkowo jedną z platform: Slack, Messenger, Webex, Skype
+:x: - 5.0 - Aplikacja obsłuży dodatkowo jedną z platform: Slack, Messenger, Webex, Skype
 
 ## **Zadanie 4** Go
 
@@ -57,4 +57,18 @@
 
 :white_check_mark: 4.5 - Należy stworzyć model kategorii i dodać relację między kategorią, a produktem - [Commit](https://github.com/Leovambarii/E_biznes_2023_2024/commit/d42cef195a7c44beb8dfe5cb1e99a18f9ffe7caf)
 
-:x: - 5.0 pogrupować zapytania w gorm’owe scope'y
+:x: - 5.0 - pogrupować zapytania w gorm’owe scope'y
+
+## **Zadanie 5** Frontend
+
+### **Kod**: [5](https://github.com/Leovambarii/E_biznes_2023_2024/tree/main/5)
+
+:white_check_mark: 3.0 - W ramach projektu należy stworzyć dwa komponenty: Produkty oraz Płatności; Płatności powinny wysyłać do aplikacji serwerowej dane, a w Produktach powinniśmy pobierać dane o produktach z aplikacji serwerowej - [Commit]()
+
+:white_check_mark: 3.5 Należy dodać Koszyk wraz z widokiem; należy wykorzystać routing - [Commit]()
+
+:white_check_mark: 4.0 - Dane pomiędzy wszystkimi komponentami powinny być przesyłane za pomocą React hooks - [Commit]()
+
+:white_check_mark: 4.5 - Należy dodać skrypt uruchamiający aplikację serwerową oraz kliencką na dockerze via docker-compose - [Commit]()
+
+:x: - 5.0 - Należy wykorzystać axios’a oraz dodać nagłówki pod CORS

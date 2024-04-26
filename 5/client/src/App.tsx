@@ -1,3 +1,4 @@
+import './App.css';
 import React from 'react';
 import { BrowserRouter, Link, Route, Routes} from 'react-router-dom';
 import NotFound from './components/NotFound';
@@ -6,13 +7,13 @@ import Products from './components/Products';
 import Payments from './components/Payments';
 import CartComponent from "./components/CartComponent";
 import { CartProvider } from './contexts/ContextCart';
-import './App.css';
+
 
 function App() {
   return (
     <CartProvider>
       <div className="App">
-        <div>
+        <div className="App-div">
           <BrowserRouter>
             <ul>
               <li><Link to="/">Home</Link></li>

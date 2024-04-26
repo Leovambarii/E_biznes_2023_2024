@@ -56,12 +56,18 @@ const Products: React.FC = () => {
             <td>
               {isInCart(product.id) ? (
                 <>
-                  <button onClick={() => addProductToCart(product)}>Add to Cart</button>
-                  <button onClick={() => removeProductFromCart(product.id)}>Remove Cart</button>
-                  <span>{` (${getQuantity(product.id)} in cart)`}</span>
+                  <td>
+                    <button onClick={() => addProductToCart(product)}>Add to Cart</button>
+                  </td>
+                  <td>
+                    <button onClick={() => removeProductFromCart(product.id)}>Remove One</button>
+                  </td>
+                  <td><span>{` (${getQuantity(product.id)} in cart)`}</span></td>
                 </>
               ) : (
-                <button onClick={() => addProductToCart(product)}>Add to Cart</button>
+                <td>
+                  <button onClick={() => addProductToCart(product)}>Add to Cart</button>
+                </td>
               )}
             </td>
           </tr>

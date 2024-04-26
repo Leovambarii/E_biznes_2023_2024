@@ -6,6 +6,7 @@ import (
 	"github.com/labstack/echo/v4"
 	"gorm.io/gorm"
 	"net/http"
+	"strconv"
 	"time"
 )
 
@@ -20,11 +21,15 @@ func NewPaymentController(db *gorm.DB) *PaymentController {
 func (pc *PaymentController) MakePayment(c echo.Context) error {
 	var payment models.Payment
 	if err := c.Bind(&payment); err != nil {
-		fmt.Println(err)
 		return c.JSON(http.StatusBadRequest, map[string]string{"error": "invalid request body"})
 	}
 
-	if payment.Amount <= 0 {
+	amount, err := strconv.ParseFloat(payment.Amount.String(), 64)
+	if err != nil {
+		return c.JSON(http.StatusBadRequest, map[string]string{"error": "invalid payment amount"})
+	}
+
+	if amount <= 0 {
 		return c.JSON(http.StatusBadRequest, map[string]string{"error": "invalid payment amount"})
 	}
 
