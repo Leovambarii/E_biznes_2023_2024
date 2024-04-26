@@ -63,12 +63,12 @@
 
 ### **Kod**: [5](https://github.com/Leovambarii/E_biznes_2023_2024/tree/main/5)
 
-:white_check_mark: 3.0 - W ramach projektu należy stworzyć dwa komponenty: Produkty oraz Płatności; Płatności powinny wysyłać do aplikacji serwerowej dane, a w Produktach powinniśmy pobierać dane o produktach z aplikacji serwerowej - [Commit]()
+:white_check_mark: 3.0 - W ramach projektu należy stworzyć dwa komponenty: Produkty oraz Płatności; Płatności powinny wysyłać do aplikacji serwerowej dane, a w Produktach powinniśmy pobierać dane o produktach z aplikacji serwerowej - [Commit](https://github.com/Leovambarii/E_biznes_2023_2024/commit/1cb2878dd190ee6d61b9f8c8391f3ca76d9c3e01)
 
-:white_check_mark: 3.5 Należy dodać Koszyk wraz z widokiem; należy wykorzystać routing - [Commit]()
+:white_check_mark: 3.5 Należy dodać Koszyk wraz z widokiem; należy wykorzystać routing - [Commit](https://github.com/Leovambarii/E_biznes_2023_2024/commit/1cb2878dd190ee6d61b9f8c8391f3ca76d9c3e01)
 
-:white_check_mark: 4.0 - Dane pomiędzy wszystkimi komponentami powinny być przesyłane za pomocą React hooks - [Commit]()
+:white_check_mark: 4.0 - Dane pomiędzy wszystkimi komponentami powinny być przesyłane za pomocą React hooks - [Commit](https://github.com/Leovambarii/E_biznes_2023_2024/commit/1cb2878dd190ee6d61b9f8c8391f3ca76d9c3e01)
 
-:white_check_mark: 4.5 - Należy dodać skrypt uruchamiający aplikację serwerową oraz kliencką na dockerze via docker-compose - [Commit]()
+:white_check_mark: 4.5 - Należy dodać skrypt uruchamiający aplikację serwerową oraz kliencką na dockerze via docker-compose - [Commit](https://github.com/Leovambarii/E_biznes_2023_2024/commit/1cb2878dd190ee6d61b9f8c8391f3ca76d9c3e01)
 
 :x: - 5.0 - Należy wykorzystać axios’a oraz dodać nagłówki pod CORS
