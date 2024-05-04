@@ -35,7 +35,7 @@
 
 ### **Kod**: [3](https://github.com/Leovambarii/E_biznes_2023_2024/tree/main/3)
 
-:white_check_mark: - 3.0 - Należy stworzyć aplikację kliencką w Kotlinie we frameworku Ktor, która pozwala na przesyłanie wiadomości na platformę Discord - [Commit](https://github.com/Leovambarii/E_biznes_2023_2024/commit/23d68b1975fd40bf206c2cb18ad62a36e0b23cc2)
+:white_check_mark: 3.0 - Należy stworzyć aplikację kliencką w Kotlinie we frameworku Ktor, która pozwala na przesyłanie wiadomości na platformę Discord - [Commit](https://github.com/Leovambarii/E_biznes_2023_2024/commit/23d68b1975fd40bf206c2cb18ad62a36e0b23cc2)
 
 :white_check_mark: 3.5 - Aplikacja jest w stanie odbierać wiadomości użytkowników z platformy Discord skierowane do aplikacji (bota) - [Commit](https://github.com/Leovambarii/E_biznes_2023_2024/commit/23d68b1975fd40bf206c2cb18ad62a36e0b23cc2)
 
@@ -49,7 +49,7 @@
 
 ### **Kod**: [4](https://github.com/Leovambarii/E_biznes_2023_2024/tree/main/4)
 
-:white_check_mark: - 3.0 - Należy stworzyć aplikację we frameworki echo w j. Go, która będzie miała kontroler Produktów zgodny z CRUD - [Commit](https://github.com/Leovambarii/E_biznes_2023_2024/commit/d42cef195a7c44beb8dfe5cb1e99a18f9ffe7caf)
+:white_check_mark: 3.0 - Należy stworzyć aplikację we frameworki echo w j. Go, która będzie miała kontroler Produktów zgodny z CRUD - [Commit](https://github.com/Leovambarii/E_biznes_2023_2024/commit/d42cef195a7c44beb8dfe5cb1e99a18f9ffe7caf)
 
 :white_check_mark: 3.5 - Należy stworzyć model Produktów wykorzystując gorm oraz wykorzystać model do obsługi produktów (CRUD) w kontrolerze (zamiast listy) - [Commit](https://github.com/Leovambarii/E_biznes_2023_2024/commit/d42cef195a7c44beb8dfe5cb1e99a18f9ffe7caf)
 
@@ -65,10 +65,24 @@
 
 :white_check_mark: 3.0 - W ramach projektu należy stworzyć dwa komponenty: Produkty oraz Płatności; Płatności powinny wysyłać do aplikacji serwerowej dane, a w Produktach powinniśmy pobierać dane o produktach z aplikacji serwerowej - [Commit](https://github.com/Leovambarii/E_biznes_2023_2024/commit/1cb2878dd190ee6d61b9f8c8391f3ca76d9c3e01)
 
-:white_check_mark: 3.5 Należy dodać Koszyk wraz z widokiem; należy wykorzystać routing - [Commit](https://github.com/Leovambarii/E_biznes_2023_2024/commit/1cb2878dd190ee6d61b9f8c8391f3ca76d9c3e01)
+:white_check_mark: 3.5 - Należy dodać Koszyk wraz z widokiem; należy wykorzystać routing - [Commit](https://github.com/Leovambarii/E_biznes_2023_2024/commit/1cb2878dd190ee6d61b9f8c8391f3ca76d9c3e01)
 
 :white_check_mark: 4.0 - Dane pomiędzy wszystkimi komponentami powinny być przesyłane za pomocą React hooks - [Commit](https://github.com/Leovambarii/E_biznes_2023_2024/commit/1cb2878dd190ee6d61b9f8c8391f3ca76d9c3e01)
 
 :white_check_mark: 4.5 - Należy dodać skrypt uruchamiający aplikację serwerową oraz kliencką na dockerze via docker-compose - [Commit](https://github.com/Leovambarii/E_biznes_2023_2024/commit/1cb2878dd190ee6d61b9f8c8391f3ca76d9c3e01)
 
 :x: - 5.0 - Należy wykorzystać axios’a oraz dodać nagłówki pod CORS
+
+## **Zadanie 6** Testy
+
+### **Kod**: [6](https://github.com/Leovambarii/E_biznes_2023_2024/tree/main/6)
+
+:white_check_mark: 3.0 - Należy stworzyć 20 przypadków testowych w CypressJS lub Selenium (Kotlin, Python, Java, JS, Go, Scala) - [Commit]()
+
+:white_check_mark: 3.5 Należy rozszerzyć testy funkcjonalne, aby zawierały minimum 50 asercji - [Commit]()
+
+:x: 4.0 - Należy stworzyć testy jednostkowe do wybranego wcześniejszego projektu z minimum 50 asercjami
+
+:x: 4.5 - Należy dodać testy API, należy pokryć wszystkie endpointy z minimum jednym scenariuszem negatywnym per endpoint
+
+:x: 5.0 - Należy uruchomić testy funkcjonalne na Browserstacku
