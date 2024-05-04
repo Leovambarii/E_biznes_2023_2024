@@ -77,9 +77,9 @@
 
 ### **Kod**: [6](https://github.com/Leovambarii/E_biznes_2023_2024/tree/main/6)
 
-:white_check_mark: 3.0 - Należy stworzyć 20 przypadków testowych w CypressJS lub Selenium (Kotlin, Python, Java, JS, Go, Scala) - [Commit]()
+:white_check_mark: 3.0 - Należy stworzyć 20 przypadków testowych w CypressJS lub Selenium (Kotlin, Python, Java, JS, Go, Scala) - [Commit](https://github.com/Leovambarii/E_biznes_2023_2024/commit/640603936e3075341076a8aa104f53efbc5b2579)
 
-:white_check_mark: 3.5 Należy rozszerzyć testy funkcjonalne, aby zawierały minimum 50 asercji - [Commit]()
+:white_check_mark: 3.5 Należy rozszerzyć testy funkcjonalne, aby zawierały minimum 50 asercji - [Commit](https://github.com/Leovambarii/E_biznes_2023_2024/commit/640603936e3075341076a8aa104f53efbc5b2579)
 
 :x: 4.0 - Należy stworzyć testy jednostkowe do wybranego wcześniejszego projektu z minimum 50 asercjami
 
