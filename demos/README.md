@@ -20,3 +20,6 @@ demo_5_Frontend:
 
 https://github.com/Leovambarii/E_biznes_2023_2024/assets/95575742/326a456f-e499-4d12-a919-1775ecdfd7bc
 
+demo_6_Testy_cut:
+
+https://github.com/Leovambarii/E_biznes_2023_2024/assets/95575742/5bee722f-dcbd-4a1d-9ff9-b2fb90f95aad
