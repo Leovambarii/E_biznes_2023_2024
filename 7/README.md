@@ -10,5 +10,6 @@
 [![Maintainability Rating](https://sonarcloud.io/api/project_badges/measure?project=Leovambarii_E_biznes_7_Sonar&metric=sqale_rating)](https://sonarcloud.io/summary/new_code?id=Leovambarii_E_biznes_7_Sonar)
 
 * [SonarCloud](https://sonarcloud.io/summary/overall?id=Leovambarii_E_biznes_7_Sonar)
-* [Server Files](https://github.com/Leovambarii/E_biznes_7_Sonar/tree/main/server)
-* [Client Files](https://github.com/Leovambarii/E_biznes_7_Sonar/tree/main/client)
+* [Files](https://github.com/Leovambarii/E_biznes_7_Sonar/tree/main/)
+  * [Server Files](https://github.com/Leovambarii/E_biznes_7_Sonar/tree/main/server)
+  * [Client Files](https://github.com/Leovambarii/E_biznes_7_Sonar/tree/main/client)
