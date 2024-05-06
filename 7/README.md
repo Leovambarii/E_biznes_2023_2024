@@ -11,3 +11,4 @@
 
 * [SonarCloud](https://sonarcloud.io/summary/overall?id=Leovambarii_E_biznes_7_Sonar)
 * [Server Files](https://github.com/Leovambarii/E_biznes_7_Sonar/tree/main/server)
+* [Client Files](https://github.com/Leovambarii/E_biznes_7_Sonar/tree/main/client)

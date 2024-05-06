@@ -100,4 +100,4 @@
 
 :white_check_mark: 4.5 - Należy wyeliminować wszystkie podatności oraz błędy bezpieczeństwa w kodzie w Sonarze (kod aplikacji serwerowej) - [Commit](https://github.com/Leovambarii/E_biznes_2023_2024/commit/853e2b788a333521920949ba0cf520fde92b848a)
 
-:x: 5.0 - Należy wyeliminować wszystkie błędy oraz zapaszki w kodzie aplikacji klienckiej
+:white_check_mark: 5.0 - Należy wyeliminować wszystkie błędy oraz zapaszki w kodzie aplikacji klienckiej - [Commit]()
