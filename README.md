@@ -92,12 +92,12 @@
 
 ### **Kod**: [7](https://github.com/Leovambarii/E_biznes_2023_2024/tree/main/7)
 
-:white_check_mark: 3.0 - Należy dodać litera do odpowiedniego kodu aplikacji serwerowej w hookach gita
+:white_check_mark: 3.0 - Należy dodać litera do odpowiedniego kodu aplikacji serwerowej w hookach gita - [Commit](https://github.com/Leovambarii/E_biznes_2023_2024/commit/853e2b788a333521920949ba0cf520fde92b848a)
 
-:white_check_mark: 3.5 - Należy wyeliminować wszystkie bugi w kodzie w Sonarze (kod aplikacji serwerowej)
+:white_check_mark: 3.5 - Należy wyeliminować wszystkie bugi w kodzie w Sonarze (kod aplikacji serwerowej) - [Commit](https://github.com/Leovambarii/E_biznes_2023_2024/commit/853e2b788a333521920949ba0cf520fde92b848a)
 
-:white_check_mark: 4.0 - Należy wyeliminować wszystkie zapaszki w kodzie w Sonarze (kod aplikacji serwerowej)
+:white_check_mark: 4.0 - Należy wyeliminować wszystkie zapaszki w kodzie w Sonarze (kod aplikacji serwerowej) - [Commit](https://github.com/Leovambarii/E_biznes_2023_2024/commit/853e2b788a333521920949ba0cf520fde92b848a)
 
-:white_check_mark: 4.5 - Należy wyeliminować wszystkie podatności oraz błędy bezpieczeństwa w kodzie w Sonarze (kod aplikacji serwerowej)
+:white_check_mark: 4.5 - Należy wyeliminować wszystkie podatności oraz błędy bezpieczeństwa w kodzie w Sonarze (kod aplikacji serwerowej) - [Commit](https://github.com/Leovambarii/E_biznes_2023_2024/commit/853e2b788a333521920949ba0cf520fde92b848a)
 
 :x: 5.0 - Należy wyeliminować wszystkie błędy oraz zapaszki w kodzie aplikacji klienckiej
