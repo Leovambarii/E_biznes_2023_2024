@@ -101,3 +101,17 @@
 :white_check_mark: 4.5 - Należy wyeliminować wszystkie podatności oraz błędy bezpieczeństwa w kodzie w Sonarze (kod aplikacji serwerowej) - [Commit](https://github.com/Leovambarii/E_biznes_2023_2024/commit/853e2b788a333521920949ba0cf520fde92b848a)
 
 :white_check_mark: 5.0 - Należy wyeliminować wszystkie błędy oraz zapaszki w kodzie aplikacji klienckiej - [Commit](https://github.com/Leovambarii/E_biznes_2023_2024/commit/ac0e1b5dc5037be980bc093ca79d20e0f3d39332)
+
+## **Zadanie 8** Oauth2
+
+### **Kod**: [8](https://github.com/Leovambarii/E_biznes_2023_2024/tree/main/8)
+
+:white_check_mark: 3.0 - Logowanie przez aplikację serwerową (bez Oauth2) - [Commit](https://github.com/Leovambarii/E_biznes_2023_2024/commit/9cf7db525a176e2cb8e54c45a2a54b59dd8a6065)
+
+:white_check_mark: 3.5 - Rejestracja przez aplikację serwerową (bez Oauth2) - [Commit](https://github.com/Leovambarii/E_biznes_2023_2024/commit/9cf7db525a176e2cb8e54c45a2a54b59dd8a6065)
+
+:x: 4.0 - Logowanie via Google OAuth2
+
+:x: 4.5 - Logowanie via Facebook lub Github OAuth2
+
+:x: 5.0 - Zapisywanie danych logowania OAuth2 po stronie serwera
