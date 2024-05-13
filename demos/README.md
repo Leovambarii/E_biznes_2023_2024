@@ -23,3 +23,8 @@ https://github.com/Leovambarii/E_biznes_2023_2024/assets/95575742/326a456f-e499-
 demo_6_Testy_cut:
 
 https://github.com/Leovambarii/E_biznes_2023_2024/assets/95575742/5bee722f-dcbd-4a1d-9ff9-b2fb90f95aad
+
+demo_8_Oauth2:
+
+https://github.com/Leovambarii/E_biznes_2023_2024/assets/95575742/9bceb12e-b0b4-42e7-9075-2283b21b5f34
+
