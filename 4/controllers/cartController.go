@@ -5,7 +5,9 @@ import (
 	"github.com/labstack/echo/v4"
 	"gorm.io/gorm"
 	"myapp/models"
+	"myapp/scopes"
 	"net/http"
+	"strconv"
 )
 
 type CartController struct {
@@ -22,7 +24,7 @@ func NewCartController(db *gorm.DB) *CartController {
 
 func (cc *CartController) GetCarts(c echo.Context) error {
 	var carts []models.Cart
-	if err := cc.DB.Preload("Products").Find(&carts).Error; err != nil {
+	if err := cc.DB.Scopes(scopes.WithProducts()).Find(&carts).Error; err != nil {
 		return c.JSON(http.StatusInternalServerError, map[string]string{"error": "internal server error"})
 	}
 
@@ -37,7 +39,7 @@ func (cc *CartController) AddCart(c echo.Context) error {
 		return c.JSON(http.StatusBadRequest, map[string]string{"error": "bad request"})
 	}
 
-	var totalCost float32
+	var totalCost float64
 	for _, productID := range req.ProductIDs {
 		var existingProduct models.Product
 		if err := cc.DB.First(&existingProduct, productID).Error; err != nil {
@@ -58,10 +60,13 @@ func (cc *CartController) AddCart(c echo.Context) error {
 }
 
 func (cc *CartController) GetCart(c echo.Context) error {
-	id := c.Param("id")
+	id, err := strconv.ParseUint(c.Param("id"), 10, 64)
+	if err != nil {
+		return c.JSON(http.StatusBadRequest, map[string]string{"error": "invalid cart ID"})
+	}
 
 	var cart models.Cart
-	if err := cc.DB.Preload("Products").First(&cart, id).Error; err != nil {
+	if err := cc.DB.Scopes(scopes.WithProducts(), scopes.ByID(id)).First(&cart).Error; err != nil {
 		if errors.Is(err, gorm.ErrRecordNotFound) {
 			return c.JSON(http.StatusNotFound, map[string]string{"error": "cart not found"})
 		}
@@ -72,10 +77,13 @@ func (cc *CartController) GetCart(c echo.Context) error {
 }
 
 func (cc *CartController) EditCart(c echo.Context) error {
-	id := c.Param("id")
+	id, err := strconv.ParseUint(c.Param("id"), 10, 64)
+	if err != nil {
+		return c.JSON(http.StatusBadRequest, map[string]string{"error": "invalid cart ID"})
+	}
 
 	var cart models.Cart
-	if err := cc.DB.Preload("Products").First(&cart, id).Error; err != nil {
+	if err := cc.DB.Scopes(scopes.WithProducts(), scopes.ByID(id)).First(&cart).Error; err != nil {
 		if errors.Is(err, gorm.ErrRecordNotFound) {
 			return c.JSON(http.StatusNotFound, map[string]string{"error": "cart not found"})
 		}
@@ -91,10 +99,10 @@ func (cc *CartController) EditCart(c echo.Context) error {
 		return c.JSON(http.StatusInternalServerError, map[string]string{"error": "internal server error"})
 	}
 
-	var totalCost float32
+	var totalCost float64
 	for _, productID := range req.ProductIDs {
 		var existingProduct models.Product
-		if err := cc.DB.First(&existingProduct, productID).Error; err != nil {
+		if err := cc.DB.Scopes(scopes.ByID(uint64(productID))).First(&existingProduct, productID).Error; err != nil {
 			return c.JSON(http.StatusBadRequest, map[string]string{"error": "product does not exist"})
 		}
 
@@ -119,10 +127,13 @@ func (cc *CartController) EditCart(c echo.Context) error {
 }
 
 func (cc *CartController) DeleteCart(c echo.Context) error {
-	id := c.Param("id")
+	id, err := strconv.ParseUint(c.Param("id"), 10, 64)
+	if err != nil {
+		return c.JSON(http.StatusBadRequest, map[string]string{"error": "invalid cart ID"})
+	}
 
 	var cart models.Cart
-	if err := cc.DB.First(&cart, id).Error; err != nil {
+	if err := cc.DB.Scopes(scopes.ByID(id)).First(&cart).Error; err != nil {
 		if errors.Is(err, gorm.ErrRecordNotFound) {
 			return c.JSON(http.StatusNotFound, map[string]string{"error": "cart not found"})
 		}

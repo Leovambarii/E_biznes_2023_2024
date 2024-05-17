@@ -5,6 +5,7 @@ import (
 	"gorm.io/driver/sqlite"
 	"gorm.io/gorm"
 	"myapp/models"
+	"myapp/scopes"
 )
 
 func Init() *gorm.DB {
@@ -26,7 +27,7 @@ func Init() *gorm.DB {
 func LoadCategoryData(db *gorm.DB, data []models.Category) error {
 	for _, category := range data {
 		var existingCategory models.Category
-		res := db.Where("name = ?", category.Name).First(&existingCategory)
+		res := db.Scopes(scopes.ByName(category.Name)).First(&existingCategory)
 		if res.Error != nil && !errors.Is(res.Error, gorm.ErrRecordNotFound) {
 			return res.Error
 		}
@@ -44,7 +45,7 @@ func LoadCategoryData(db *gorm.DB, data []models.Category) error {
 func LoadProductData(db *gorm.DB, data []models.Product) error {
 	for _, product := range data {
 		var existingProduct models.Product
-		res := db.Where("name = ? AND description = ? AND category_id = ?", product.Name, product.Description, product.CategoryID).First(&existingProduct)
+		res := db.Scopes(scopes.ByName(product.Name), scopes.ByDescription(product.Description), scopes.ByCategoryID(product.CategoryID)).First(&existingProduct)
 		if res.Error != nil && !errors.Is(res.Error, gorm.ErrRecordNotFound) {
 			return res.Error
 		}

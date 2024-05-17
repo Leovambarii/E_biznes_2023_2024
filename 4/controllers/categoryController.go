@@ -5,7 +5,9 @@ import (
 	"github.com/labstack/echo/v4"
 	"gorm.io/gorm"
 	"myapp/models"
+	"myapp/scopes"
 	"net/http"
+	"strconv"
 )
 
 type CategoryController struct {
@@ -18,7 +20,7 @@ func NewCategoryController(db *gorm.DB) *CategoryController {
 
 func (cc *CategoryController) GetCategories(c echo.Context) error {
 	var categories []models.Category
-	if err := cc.DB.Preload("Products").Find(&categories).Error; err != nil {
+	if err := cc.DB.Scopes(scopes.WithProducts()).Find(&categories).Error; err != nil {
 		if errors.Is(err, gorm.ErrRecordNotFound) {
 			return c.JSON(http.StatusNotFound, map[string]string{"error": "category not found"})
 		}
@@ -29,10 +31,13 @@ func (cc *CategoryController) GetCategories(c echo.Context) error {
 }
 
 func (cc *CategoryController) GetCategory(c echo.Context) error {
-	id := c.Param("id")
+	id, err := strconv.ParseUint(c.Param("id"), 10, 64)
+	if err != nil {
+		return c.JSON(http.StatusBadRequest, map[string]string{"error": "invalid category ID"})
+	}
 
 	var category models.Category
-	if err := cc.DB.Preload("Products").First(&category, id).Error; err != nil {
+	if err := cc.DB.Scopes(scopes.WithProducts(), scopes.ByID(id)).First(&category).Error; err != nil {
 		if errors.Is(err, gorm.ErrRecordNotFound) {
 			return c.JSON(http.StatusNotFound, map[string]string{"error": "category not found"})
 		}
@@ -57,10 +62,13 @@ func (cc *CategoryController) AddCategory(c echo.Context) error {
 }
 
 func (cc *CategoryController) EditCategory(c echo.Context) error {
-	id := c.Param("id")
+	id, err := strconv.ParseUint(c.Param("id"), 10, 64)
+	if err != nil {
+		return c.JSON(http.StatusBadRequest, map[string]string{"error": "invalid category ID"})
+	}
 
 	var category models.Category
-	if err := cc.DB.Preload("Products").First(&category, id).Error; err != nil {
+	if err := cc.DB.Scopes(scopes.WithProducts(), scopes.ByID(id)).First(&category).Error; err != nil {
 		if errors.Is(err, gorm.ErrRecordNotFound) {
 			return c.JSON(http.StatusNotFound, map[string]string{"error": "category not found"})
 		}
@@ -82,10 +90,13 @@ func (cc *CategoryController) EditCategory(c echo.Context) error {
 }
 
 func (cc *CategoryController) DeleteCategory(c echo.Context) error {
-	id := c.Param("id")
+	id, err := strconv.ParseUint(c.Param("id"), 10, 64)
+	if err != nil {
+		return c.JSON(http.StatusBadRequest, map[string]string{"error": "invalid category ID"})
+	}
 
 	var category models.Category
-	if err := cc.DB.First(&category, id).Error; err != nil {
+	if err := cc.DB.Scopes(scopes.WithProducts(), scopes.ByID(id)).First(&category).Error; err != nil {
 		if errors.Is(err, gorm.ErrRecordNotFound) {
 			return c.JSON(http.StatusNotFound, map[string]string{"error": "category not found"})
 		}
@@ -93,7 +104,7 @@ func (cc *CategoryController) DeleteCategory(c echo.Context) error {
 	}
 
 	var products int64
-	cc.DB.Model(&models.Product{}).Where("category_id = ?", category.ID).Count(&products)
+	cc.DB.Model(&models.Product{}).Scopes(scopes.ByCategoryID(uint64(category.ID))).Count(&products)
 
 	if products > 0 {
 		return c.JSON(http.StatusConflict, "Cannot delete category with products")

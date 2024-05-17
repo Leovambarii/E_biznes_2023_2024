@@ -5,7 +5,9 @@ import (
 	"github.com/labstack/echo/v4"
 	"gorm.io/gorm"
 	"myapp/models"
+	"myapp/scopes"
 	"net/http"
+	"strconv"
 )
 
 type ProductController struct {
@@ -46,10 +48,13 @@ func (pc *ProductController) AddProduct(c echo.Context) error {
 }
 
 func (pc *ProductController) GetProduct(c echo.Context) error {
-	id := c.Param("id")
+	id, err := strconv.ParseUint(c.Param("id"), 10, 64)
+	if err != nil {
+		return c.JSON(http.StatusBadRequest, map[string]string{"error": "invalid product ID"})
+	}
 
 	var product models.Product
-	if err := pc.DB.First(&product, id).Error; err != nil {
+	if err := pc.DB.Scopes(scopes.ByID(id)).First(&product).Error; err != nil {
 		if errors.Is(err, gorm.ErrRecordNotFound) {
 			return c.JSON(http.StatusNotFound, map[string]string{"error": "product not found"})
 		}
@@ -60,10 +65,13 @@ func (pc *ProductController) GetProduct(c echo.Context) error {
 }
 
 func (pc *ProductController) EditProduct(c echo.Context) error {
-	id := c.Param("id")
+	id, err := strconv.ParseUint(c.Param("id"), 10, 64)
+	if err != nil {
+		return c.JSON(http.StatusBadRequest, map[string]string{"error": "invalid product ID"})
+	}
 
 	var product models.Product
-	if err := pc.DB.First(&product, id).Error; err != nil {
+	if err := pc.DB.Scopes(scopes.ByID(id)).First(&product).Error; err != nil {
 		if errors.Is(err, gorm.ErrRecordNotFound) {
 			return c.JSON(http.StatusNotFound, map[string]string{"error": "product not found"})
 		}
@@ -99,10 +107,13 @@ func (pc *ProductController) EditProduct(c echo.Context) error {
 }
 
 func (pc *ProductController) DeleteProduct(c echo.Context) error {
-	id := c.Param("id")
+	id, err := strconv.ParseUint(c.Param("id"), 10, 64)
+	if err != nil {
+		return c.JSON(http.StatusBadRequest, map[string]string{"error": "invalid product ID"})
+	}
 
 	var product models.Product
-	if err := pc.DB.First(&product, id).Error; err != nil {
+	if err := pc.DB.Scopes(scopes.ByID(id)).First(&product).Error; err != nil {
 		if errors.Is(err, gorm.ErrRecordNotFound) {
 			return c.JSON(http.StatusNotFound, map[string]string{"error": "product not found"})
 		}
