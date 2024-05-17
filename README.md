@@ -58,7 +58,7 @@
 
 :white_check_mark: 4.5 - Należy stworzyć model kategorii i dodać relację między kategorią, a produktem - [Commit](https://github.com/Leovambarii/E_biznes_2023_2024/commit/d42cef195a7c44beb8dfe5cb1e99a18f9ffe7caf)
 
-:x: - 5.0 - pogrupować zapytania w gorm’owe scope'y
+:white_check_mark: - 5.0 - pogrupować zapytania w gorm’owe scope'y - [Commit](https://github.com/Leovambarii/E_biznes_2023_2024/commit/c92bb96345de9881072a7adeb9754f906f46c2e8)
 
 ## **Zadanie 5** Frontend
 
