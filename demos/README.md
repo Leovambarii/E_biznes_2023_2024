@@ -28,3 +28,7 @@ demo_8_Oauth2:
 
 https://github.com/Leovambarii/E_biznes_2023_2024/assets/95575742/9bceb12e-b0b4-42e7-9075-2283b21b5f34
 
+demo_9_Bot:
+
+https://github.com/Leovambarii/E_biznes_2023_2024/assets/95575742/728fd676-7d68-4ee5-83f5-6baa8754f090
+
