@@ -76,17 +76,17 @@ const ChatPage: React.FC = () => {
   };
 
   return (
-    <div>
+    <div className="chat-container">
       <h1>AI Assistant Chat</h1>
-      <div>
+      <div className="message-list">
         {messages.map((message, index) => (
-          <div key={index} className={message.role}>
-           {message.role === 'user' ? 'You: ' : 'Assistant: '}{message.message}
+          <div key={index} className={`message ${message.role}`}>
+            <strong>{message.role === 'user' ? 'You: ' : 'Assistant: '}</strong>{message.message}
           </div>
         ))}
       </div>
       <MessageInput sendMessage={sendMessage} />
-      <button onClick={closeChat}>Close Chat</button>
+      <button className="close-chat-button" onClick={closeChat}>Close Chat</button>
     </div>
   );
 };

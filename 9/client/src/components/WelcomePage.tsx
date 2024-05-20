@@ -9,9 +9,9 @@ const WelcomePage: React.FC = () => {
   };
 
   return (
-    <div>
-      <h1>Welcome to the our software company Chat App</h1>
-      <button onClick={handleStartChat}>Start Chat</button>
+    <div className="Home-div">
+      <h1>Welcome to Our<br/>Software Company Chat App!</h1>
+      <button className="start-chat-button" onClick={handleStartChat}>Start Chat</button>
     </div>
   );
 };

@@ -1,0 +1,121 @@
+html, body, #root {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: #f0f2f5;
+}
+
+#root, .App, .App-div, .Home-div, .chat-container, .message-list, form {
+    display: flex;
+    flex-direction: column;
+}
+
+#root {
+    justify-content: center;
+    align-items: center;
+}
+
+.App {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: #f7f9fc;
+}
+
+.App-div {
+    width: 100%;
+    max-width: 500px;
+    height: 80%;
+    border: 1px solid #dcdfe3;
+    border-radius: 10px;
+    background-color: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+}
+
+.Home-div {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    font-size: 1.5em;
+    color: #333;
+    font-weight: bold;
+}
+
+.chat-container {
+    height: 100%;
+    overflow: hidden;
+}
+
+.message-list {
+    flex: 1;
+    overflow-y: auto;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #e1e4e8;
+    border-radius: 5px;
+    background-color: #f9f9fb;
+}
+
+.message {
+    margin-bottom: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.message.user {
+    background-color: #d1e7dd;
+}
+
+.message.assistant {
+    background-color: #e9ecef;
+}
+
+form {
+    flex-direction: row;
+}
+
+input[type="text"] {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+button {
+    padding: 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    border-radius: 0 5px 5px 0;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.close-chat-button {
+    margin-top: 10px;
+    background-color: #dc3545;
+    border-radius: 5px;
+}
+
+.close-chat-button:hover {
+    background-color: #c82333;
+}
+
+.start-chat-button {
+    border-radius: 5px;
+    margin: 30px auto auto;
+    width: 50%;
+}

@@ -30,7 +30,7 @@ const MessageInput: React.FC<MessageInputProps> = ({ sendMessage }) => {
         disabled={sending}
       />
       <button type="submit" disabled={sending}>
-        {sending ? 'Sending...' : 'Send'}
+        {sending ? 'Waiting for response...' : 'Send'}
       </button>
     </form>
   );

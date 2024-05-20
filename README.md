@@ -126,6 +126,6 @@
 
 :white_check_mark: 4.0 - Stworzyć listę 5 różnych otwarć oraz zamknięć rozmowy - [Commit](https://github.com/Leovambarii/E_biznes_2023_2024/commit/9cac3b11eb11314d09142c35b3538003f78b5ff2)
 
-:x: 4.5 - Filtrowanie po zagadnieniach związanych ze sklepem (np. ograniczenie się jedynie do ubrań oraz samego sklepu) do GPT
+:x: 4.5 - Filtrowanie po zagadnieniach związanych ze sklepem (np. ograniczenie się jedynie do ubrań oraz samego sklepu) do GPT/LLAMA
 
 :x: 5.0 - Filtrowanie odpowiedzi po sentymencie
