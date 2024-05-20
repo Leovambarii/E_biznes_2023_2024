@@ -115,3 +115,17 @@
 :x: 4.5 - Logowanie via Facebook lub Github OAuth2
 
 :x: 5.0 - Zapisywanie danych logowania OAuth2 po stronie serwera
+
+## **Zadanie 9** ChatGPT/LLAMA bot
+
+### **Kod**: [9](https://github.com/Leovambarii/E_biznes_2023_2024/tree/main/9)
+
+:white_check_mark: 3.0 - Należy stworzyć po stronie serwerowej osobny serwis do łącznia z ChatGPT/LLAMA do usługi chat - [Commit](https://github.com/Leovambarii/E_biznes_2023_2024/commit/9cac3b11eb11314d09142c35b3538003f78b5ff2)
+
+:white_check_mark: 3.5 - Należy stworzyć interfejs frontowy dla użytkownika, który komunikuje się z serwisem; odpowiedzi powinny być wysyłane do frontendowego interfejsu - [Commit](https://github.com/Leovambarii/E_biznes_2023_2024/commit/9cac3b11eb11314d09142c35b3538003f78b5ff2)
+
+:white_check_mark: 4.0 - Stworzyć listę 5 różnych otwarć oraz zamknięć rozmowy - [Commit](https://github.com/Leovambarii/E_biznes_2023_2024/commit/9cac3b11eb11314d09142c35b3538003f78b5ff2)
+
+:x: 4.5 - Filtrowanie po zagadnieniach związanych ze sklepem (np. ograniczenie się jedynie do ubrań oraz samego sklepu) do GPT
+
+:x: 5.0 - Filtrowanie odpowiedzi po sentymencie
