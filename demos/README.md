@@ -32,3 +32,6 @@ demo_9_Bot:
 
 https://github.com/Leovambarii/E_biznes_2023_2024/assets/95575742/728fd676-7d68-4ee5-83f5-6baa8754f090
 
+demo_10_ Chmura_CI:
+
+https://github.com/Leovambarii/E_biznes_2023_2024/assets/95575742/642500fd-f8df-4c18-b195-364fdbe6ceff
