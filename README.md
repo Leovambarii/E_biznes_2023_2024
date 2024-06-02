@@ -129,3 +129,17 @@
 :x: 4.5 - Filtrowanie po zagadnieniach związanych ze sklepem (np. ograniczenie się jedynie do ubrań oraz samego sklepu) do GPT/LLAMA
 
 :x: 5.0 - Filtrowanie odpowiedzi po sentymencie
+
+## **Zadanie 10** Chmura/CI
+
+### **Kod**: [10](https://github.com/Leovambarii/E_biznes_2023_2024/tree/main/10)
+
+:white_check_mark: 3.0 - Należy stworzyć odpowiednie instancje po stronie chmury na Docker - [Commit](https://github.com/Leovambarii/E_biznes_2023_2024/commit/e106c70a5041aabd04b80c31d5abe7be85566a14)
+
+:x: 3.5 - Stworzyć odpowiedni pipeline w Github Actions do budowania aplikacji (np. via fatjar)
+
+:x: 4.0 - Dodać notyfikację mailową o zbudowaniu aplikacji
+
+:x: 4.5 - Dodać krok z deploymentem aplikacji serwerowej oraz klienckiej na chmurę
+
+:x: 5.0 - Dodać uruchomienie regresyjnych testów automatycznych (funkcjonalnych) jako krok w Actions
